@@ -1,0 +1,26 @@
+items: [
+  0: {
+    videoPath: './public/Hpee77I.gif.mp4',
+    title: 'Intro',
+    question: 'Qual é a cor do cavalo branco de Napoleão',
+    answers: [
+      'Branco',
+      'Preto',
+      'Azul',
+      'Marrom'
+    ],
+    rightAnswer: 0
+  },
+  1: {
+    videoPath: './public/Hpee77I.gif.mp4',
+    title: 'Cap. 1',
+    question: 'Quantos anos tem o Mauricio',
+    answers: [
+      '12',
+      '26',
+      '56',
+      '34'
+    ],
+    rightAnswer: 3
+  }
+]

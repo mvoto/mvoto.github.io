@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue Basics</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://unpkg.com/vue@next" defer></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body id="pages">
+    <header>
+      <h1>{{ pageObj().title }}</h1>
+    </header>
+    <section id="events">
+      <img v-if="currentAnswer && answeredCorrectly" src="https://media1.tenor.com/images/708bc1bcee18db7ff01522cac3d35c1d/tenor.gif?itemid=12673553" alt="jesus-thumbs-up" />
+      <img v-if="currentAnswer && !answeredCorrectly" src="https://media0.giphy.com/media/KOUp2nbwHm7vy/200.gif" alt="kevin-thumbs-down" />
+      <p v-if="currentAnswer && !answeredCorrectly">
+        Resposta errada tente novamente :(
+      </p>
+      <button class="btn-small" v-if="currentAnswer && !answeredCorrectly" v-on:click="resetState">Clique aqui para assistir o video novamente</button>
+      <video v-if="currentAnswer === null" controls width="400" v-bind:src="pageObj().videoPath">
+        <source v-bind:src="pageObj().videoPath" type="video/mp4">
+        Desculpe, seu browser não suporta este video player :(
+      </video>
+      <h2>{{ pageObj().question }}</h2>
+      <div v-if="pageObj().answers.length > 0" v-for="answer in pageObj().answers" class="answers">
+        <div class="answer">
+          <input type="radio" :id="answer" name="answer" :value="answer" v-on:input="checkAnswer" :disabled="answeredCorrectly ? true : null">
+          <label v-bind:for="answer">{{ answer }}</label><br>
+        </div>
+      </div>
+      <div v-show="pageObj().imageUrl">
+        <img src="pageObj().imageUrl" alt="pageObj().imageUrl"/>
+      </div>
+      <br />
+      <div class="buttons">
+        <button v-on:click="goToPage(pageNumber - 1)" v-show="notFirstPage()">Voltar</button>
+        <button v-on:click="goToPage(pageNumber + 1)" :disabled="answeredCorrectly ? null : true" v-show="notLastPage()">Próximo</button>
+      </div>
+    </section>
+  </body>
+</html>
