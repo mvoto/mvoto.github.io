@@ -1,26 +1,24 @@
-items: [
-  0: {
-    videoPath: './public/Hpee77I.gif.mp4',
-    title: 'Intro',
-    question: 'Qual é a cor do cavalo branco de Napoleão',
-    answers: [
-      'Branco',
-      'Preto',
-      'Azul',
-      'Marrom'
-    ],
-    rightAnswer: 0
-  },
-  1: {
-    videoPath: './public/Hpee77I.gif.mp4',
-    title: 'Cap. 1',
-    question: 'Quantos anos tem o Mauricio',
-    answers: [
-      '12',
-      '26',
-      '56',
-      '34'
-    ],
-    rightAnswer: 3
-  }
-]
+{
+  "items": [
+    {
+      "videoPath": "./public/video-1-intro.mp4",
+      "title": "Intro",
+      "question": "Você conhece o Pinóquio?",
+      "answers": [],
+      "imageUrl": "https://media1.tenor.com/images/45705162053cce4cf853d122b80a0899/tenor.gif?itemid=5227247",
+      "rightAnswer": null
+    },
+    {
+      "videoPath": "./public/Hpee77I.gif.mp4",
+      "title": "Pergunta 1",
+      "question": "Qual é a cor do cavalo branco de Napoleão?",
+      "answers": [
+        "Branco",
+        "Preto",
+        "Azul",
+        "Marrom"
+      ],
+      "rightAnswer": "Branco"
+    }
+  ]
+}

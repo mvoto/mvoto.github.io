@@ -13,9 +13,9 @@ body {
 
 header {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
-  margin: 2rem auto;
+  margin: 1.5rem auto;
   border-radius: 10px;
-  padding: 1rem;
+  padding: 0.5rem;
   background-color: #f6ef49;
   color: white;
   text-align: center;
@@ -51,7 +51,7 @@ h1 {
 
 #events h2 {
   font-size: 2rem;
-  border-bottom: 4px solid #ccc;
+  border-bottom: 3px solid #f6ef49;
   color: #f6ef49;
   margin: 0 0 2rem 0;
 }
@@ -108,7 +108,7 @@ h1 {
 }
 .answers {
   display: flex;
-  margin-left: 40%;
+  margin-left: 30%;
 }
 .answer {
   font-size: 1.5rem;
