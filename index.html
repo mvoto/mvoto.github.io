@@ -37,12 +37,12 @@
         </div>
       </div>
       <div v-show="pageObj().imageUrl">
-        <img src="pageObj().imageUrl" alt="pageObj().imageUrl"/>
+        <img v-bind:src="pageObj().imageUrl" v-bind:alt="pageObj().imageUrl"/>
       </div>
       <br />
       <div class="buttons">
         <button v-on:click="goToPage(pageNumber - 1)" v-show="notFirstPage()">Voltar</button>
-        <button v-on:click="goToPage(pageNumber + 1)" :disabled="answeredCorrectly ? null : true" v-show="notLastPage()">Próximo</button>
+        <button v-on:click="goToPage(pageNumber + 1)" :disabled="nextDisabled()" v-show="notLastPage()">Próximo</button>
       </div>
     </section>
   </body>
